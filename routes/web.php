@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ExperiencesController;
+use App\Http\Controllers\ReservationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('experience/index', [ExperiencesController::class, 'index'])->name('experience.index');
+
+Route::get('reservation/index', [ReservationController::class, 'index'])->name('reservation.index');
